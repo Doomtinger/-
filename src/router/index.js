@@ -1,0 +1,5 @@
+import React, { Component } from 'react'
+import { Router, Route, Switch } from 'react-router-dom'
+import CommonRouterView from '../components/common/CommonRouterView'
+import history from '../utils/history'
+import { asyncComponent } from '../utils/asyncComponent'
