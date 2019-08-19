@@ -3,6 +3,7 @@ import {Layout} from 'antd'
 import antd from 'antd'
 import SilderNav from "../../components/SilderNav"
 import HeaderBar from "../../components/HeaderBar"
+import ContentMain from '../../components/ContentMain'
 const { Menu, Icon, Button } = antd;
 const {Sider, Header, Content, Footer} = Layout
 const { SubMenu }  = Menu;
@@ -30,7 +31,9 @@ class Index extends React.Component{
             <Header style={{background: '#fff', padding: '0 16px'}}>
               <HeaderBar collapsed={this.state.collapsed} onToggle={this.toggle}/>
             </Header>
-            <Content>Content</Content>
+            <Content>
+              <ContentMain/>
+            </Content>
             <Footer style={{textAlign: 'center'}}>Footer</Footer>
           </Layout>
         </Layout>
