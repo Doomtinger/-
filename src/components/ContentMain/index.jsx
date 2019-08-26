@@ -6,13 +6,13 @@ import PrivateRoute from '../PrivateRoute'
 const Home = LoadableComponent(()=>import('../../router/Home/index'))  //参数一定要是函数，否则不会懒加载，只会代码拆分
 
 //基本组件Demo
-const ButtonDemo = LoadableComponent(()=>import('../../router/General/ButtonDemo/index'))
+const ButtonDemo = LoadableComponent(() => import('../../router/General/ButtonDemo/index.js'))
 const IconDemo = LoadableComponent(()=>import('../../router/General/IconDemo/index'))
 
 // //导航组件Demo
-// const DropdownDemo = LoadableComponent(()=>import('../../router/Navigation/DropdownDemo/index'))
-// const MenuDemo = LoadableComponent(()=>import('../../router/Navigation/MenuDemo/index'))
-// const StepsDemo = LoadableComponent(()=>import('../../router/Navigation/StepsDemo/index'))
+const DropdownDemo = LoadableComponent(()=>import('../../router/Navigation/DropdownDemo/index'))
+const MenuDemo = LoadableComponent(()=>import('../../router/Navigation/MenuDemo/index'))
+const StepsDemo = LoadableComponent(()=>import('../../router/Navigation/StepsDemo/index'))
 
 // //输入组件Demo
 // const FormDemo1 = LoadableComponent(()=>import('../../router/Entry/FormDemo/FormDemo1'))
@@ -50,11 +50,11 @@ class ContentMain extends React.Component {
           <PrivateRoute exact path='/home' component={Home}/>
 
           <PrivateRoute exact path='/home/general/button' component={ButtonDemo}/>
-          {/* <PrivateRoute exact path='/home/general/icon' component={IconDemo}/> */}
+          <PrivateRoute exact path='/home/general/icon' component={IconDemo}/>
 
-          {/* <PrivateRoute exact path='/home/navigation/dropdown' component={DropdownDemo}/>
+          <PrivateRoute exact path='/home/navigation/dropdown' component={DropdownDemo}/>
           <PrivateRoute exact path='/home/navigation/menu' component={MenuDemo}/>
-          <PrivateRoute exact path='/home/navigation/steps' component={StepsDemo}/> */}
+          <PrivateRoute exact path='/home/navigation/steps' component={StepsDemo}/>
 
           {/* <PrivateRoute exact path='/home/entry/form/basic-form' component={FormDemo1}/>
           <PrivateRoute exact path='/home/entry/form/step-form' component={FormDemo2}/>
